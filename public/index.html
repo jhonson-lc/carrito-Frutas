@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main
+      class="container flex items-center justify-center w-full mx-auto mt-5"
+    >
+      <section class="flex flex-wrap">
+        <article class="flex flex-col items-center w-32 p-3 mr-3 border card">
+          <h1 class="card_title">Frutilla 🍓</h1>
+          <span class="text-lg font-thin">$300</span>
+          <button
+            class="
+              px-2
+              py-1
+              mt-1
+              text-white
+              bg-blue-500
+              active:bg-blue-500
+              hover:bg-blue-400
+              card_btn
+              rounded-md
+            "
+            data-fruta="frutilla"
+            data-precio="300"
+          >
+            Agregar
+          </button>
+        </article>
+        <article class="flex flex-col items-center w-32 p-3 mr-3 border card">
+          <h1 class="card_title">Manzana 🍏</h1>
+          <span class="text-lg font-thin">$100</span>
+          <button
+            class="
+              px-2
+              py-1
+              mt-1
+              text-white
+              bg-blue-500
+              active:bg-blue-500
+              hover:bg-blue-400
+              card_btn
+              rounded-md
+            "
+            data-fruta="manzana"
+            data-precio="100"
+          >
+            Agregar
+          </button>
+        </article>
+        <article class="flex flex-col items-center w-32 p-3 mr-3 border card">
+          <h1 class="card_title">Banana 🍌</h1>
+          <span class="text-lg font-thin">$300</span>
+          <button
+            class="
+              px-2
+              py-1
+              mt-1
+              text-white
+              bg-blue-500
+              active:bg-blue-500
+              hover:bg-blue-400
+              card_btn
+              rounded-md
+            "
+            data-fruta="banana"
+            data-precio="200"
+          >
+            Agregar
+          </button>
+        </article>
+      </section>
+    </main>
+    <section class="flex items-center justify-center container-template">
+      <ul id="carrito" class="w-full p-6"></ul>
+    </section>
+    <template id="template">
+      <li class="flex flex-col w-1/2 p-3 mx-auto">
+        <div class="block p-2 bg-gray-200 border">
+          <span
+            class="
+              rounded-full
+              inline-block
+              text-white text-center
+              w-5
+              h-5
+              text-sm
+              justify-center
+              bg-blue-500
+              active:bg-blue-500
+              hover:bg-blue-400
+              card_btn
+              font-bold
+              item_cant
+            "
+            >12</span
+          >
+          <span class="capitalize item_title">Frutilla</span>
+        </div>
+        <div
+          class="
+            flex
+            items-center
+            justify-between
+            p-2
+            border border-t-0
+            item_total
+          "
+        >
+          <span>Total:$300</span>
+          <div>
+            <button
+              class="
+                px-2
+                py-1
+                mt-1
+                text-white
+                bg-green-500
+                active:bg-green-500
+                hover:bg-green-400
+                card_btn
+                rounded-md
+                button_agregar
+              "
+              data-id=""
+            >
+              Agregar
+            </button>
+            <button
+              class="
+                px-2
+                py-1
+                mt-1
+                text-white
+                bg-red-500
+                active:bg-red-500
+                hover:bg-red-400
+                card_btn
+                rounded-md
+                button_quitar
+              "
+              data-id=""
+            >
+              Quitar
+            </button>
+          </div>
+        </div>
+      </li>
+    </template>
+    <footer class="flex items-center justify-between p-2 border border-t-0">
+      <template>
+        <span>Total:$300</span>
+        <button
+          class="
+            mt-1
+            text-white
+            bg-blue-500
+            active:bg-blue-500
+            hover:bg-blue-400
+            card_btn
+            rounded-md
+          "
+          data-fruta="banana"
+        >
+          Finalizar la compra
+        </button>
+      </template>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
