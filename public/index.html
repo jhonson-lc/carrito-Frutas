@@ -102,7 +102,7 @@
           <span class="capitalize item_title">Frutilla</span>
         </div>
         <div class="flex items-center justify-between p-2 border border-t-0 item_total">
-          <span>Total:$300</span>
+          <p>Total:$<span>300</span></p>
           <div>
             <button
               class="
@@ -142,23 +142,24 @@
         </div>
       </li>
     </template>
-    <footer class="flex items-center justify-between p-2 border border-t-0">
-      <template>
-        <span>Total:$300</span>
-        <button
-          class="
-            mt-1
-            text-white
-            bg-blue-500
-            active:bg-blue-500
-            hover:bg-blue-400
-            card_btn
-            rounded-md
-          "
-          data-fruta="banana"
-        >
-          Finalizar la compra
-        </button>
+    <footer id="footer_carrito">
+      <template id="footer_template">
+        <div class="flex justify-between p-2 w-1/2 mx-auto items-center border">
+          <p>Total:$<span>300</span></p>
+          <button
+            class="
+              p-1
+              text-white
+              bg-blue-500
+              active:bg-blue-500
+              hover:bg-blue-400
+              card_btn
+              rounded-md
+            "
+          >
+            Finalizar la compra
+          </button>
+        </div>
       </template>
     </footer>
     <script src="app.js"></script>
